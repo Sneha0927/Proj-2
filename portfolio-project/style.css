@@ -1,0 +1,373 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    /* Clean background color */
+}
+
+/* Global Styles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    /* Dark blue-gray */
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #3498db;
+    /* Bright blue */
+    color: #fff;
+}
+
+.primary-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px);
+}
+
+.secondary-btn {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.secondary-btn:hover {
+    background-color: #34495e;
+    transform: scale(1.05);
+    /* Slight grow on hover */
+}
+
+/* Header & Navbar */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #3498db;
+    text-decoration: none;
+}
+
+#nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav-menu ul li {
+    margin-left: 20px;
+}
+
+#nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#nav-menu ul li a:hover {
+    color: #3498db;
+}
+
+/* Mobile Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    /* Vibrant gradient */
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    color: #f1c40f;
+    /* Yellow accent */
+}
+
+/* About Section */
+.about {
+    padding: 4rem 0;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Projects Section */
+.projects {
+    background-color: #ecf0f1;
+    padding: 4rem 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.project-info p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Skills Section */
+.skills {
+    padding: 4rem 0;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skill-item {
+    background-color: #fff;
+    padding: 1.5rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skill-item:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.skill-item i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+}
+
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.error-msg {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.success-msg {
+    color: #27ae60;
+    margin-top: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #3498db;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-delay {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #nav-menu {
+        display: none;
+        /* Hidden by default on mobile */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 2rem 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    #nav-menu.active {
+        display: block;
+        /* Show menu when toggle button is clicked */
+    }
+
+    #nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav-menu ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A simple, beginner-friendly developer portfolio showcasing web development skills and projects.">
+    <title>My First Developer Portfolio | Beginner Web Developer</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">My Portfolio</a>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Hi, I'm <span class="highlight">Sneha kumari</span></h1>
+                <p class="fade-in-delay">A beginner web developer passionate about building clean and functional
+                    websites.</p>
+                <a href="#projects" class="btn primary-btn fade-in-delay">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I am a beginner web developer currently learning the fundamentals of the web. I have always been
+                        fascinated by how the internet works and decided to dive deep into HTML, CSS, and JavaScript.
+                    </p>
+                    <p>My goal is to create responsive, user-friendly experiences that make a difference. I'm excited to
+                        keep growing and building new things every day!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="project1.png" alt="Dashboard Project" class="project-img">
+                    <div class="project-info">
+                        <h3>Personal Dashboard</h3>
+                        <p>A simple dashboard designed to help track daily tasks and goals. Built with HTML and CSS
+                            Flexbox.</p>
+                        <a href="#" class="btn secondary-btn">View Code</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="project2.png" alt="Weather App Project" class="project-img">
+                    <div class="project-info">
+                        <h3>Weather Notification App</h3>
+                        <p>A minimalist weather app that provides daily updates. Focused on responsive design
+                            principles.</p>
+                        <a href="#" class="btn secondary-btn">View Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project1.png" alt="Dashboard Project" class="project-img">
+                    <div class="project-info">
+                        <h3>My Resume</h3>
+                        <p>A simple resume designed to help track daily tasks and goals.Built with HTML and CSS.</p>
+                        <a href="../Sneha_kumari_Resume..pdf" class="btn secondary-btn">View Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-list">
+                <div class="skill-item"><i class="fab fa-html5"></i> HTML</div>
+                <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS</div>
+                <div class="skill-item"><i class="fab fa-js-square"></i> JavaScript</div>
+                <div class="skill-item"><i class="fas fa-mobile-alt"></i> Responsive Design</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-form-container">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        <span class="error-msg" id="name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <span class="error-msg" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message..."
+                            required></textarea>
+                        <span class="error-msg" id="message-error"></span>
+                    </div>
+                    <button type="submit" class="btn primary-btn full-width">Send Message</button>
+                    <div id="form-success" class="success-msg hidden">Thank you! Your message has been sent.</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/Sneha0927"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/snekri27109/"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2026 Sneha kumari. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
