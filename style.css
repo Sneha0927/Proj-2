@@ -335,11 +335,198 @@ body {
     }
 }
 
+/* ============================
+   Theme Toggle Switch
+   ============================ */
+.theme-toggle-li {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.theme-switch .fa-sun {
+    color: #f39c12;
+    font-size: 1rem;
+}
+
+.theme-switch .fa-moon {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+.toggle-track {
+    width: 44px;
+    height: 24px;
+    background-color: #bdc3c7;
+    border-radius: 12px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* When dark mode is active, slide thumb to the right */
+body.dark-mode .toggle-track {
+    background-color: #3498db;
+}
+
+body.dark-mode .toggle-thumb {
+    transform: translateX(20px);
+}
+
+body.dark-mode .theme-switch .fa-sun {
+    color: #7f8c8d;
+}
+
+body.dark-mode .theme-switch .fa-moon {
+    color: #f1c40f;
+}
+
+/* ============================
+   Dark Mode Styles
+   ============================ */
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Navbar */
+body.dark-mode .navbar {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .logo {
+    color: #5dade2;
+}
+
+body.dark-mode #nav-menu ul li a {
+    color: #ccc;
+}
+
+body.dark-mode #nav-menu ul li a:hover {
+    color: #5dade2;
+}
+
+/* Hero */
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #1a5276, #6c3483);
+}
+
+/* Section Titles */
+body.dark-mode .section-title {
+    color: #ecf0f1;
+}
+
+/* About */
+body.dark-mode .about-text p {
+    color: #bbb;
+}
+
+/* Projects */
+body.dark-mode .projects {
+    background-color: #1a1a2e;
+}
+
+body.dark-mode .project-card {
+    background-color: #2c2c3e;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .project-info h3 {
+    color: #ecf0f1;
+}
+
+body.dark-mode .project-info p {
+    color: #bbb;
+}
+
+body.dark-mode .secondary-btn {
+    background-color: #3498db;
+}
+
+body.dark-mode .secondary-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Skills */
+body.dark-mode .skill-item {
+    background-color: #2c2c3e;
+    color: #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .skill-item:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Contact */
+body.dark-mode .contact {
+    background-color: #121212;
+}
+
+body.dark-mode .contact-form-container {
+    background-color: #1e1e2f;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .form-group label {
+    color: #ccc;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    background-color: #2c2c3e;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+    border-color: #5dade2;
+}
+
+body.dark-mode .form-group input::placeholder,
+body.dark-mode .form-group textarea::placeholder {
+    color: #888;
+}
+
+/* Footer */
+body.dark-mode .footer {
+    background-color: #0d0d0d;
+}
+
+/* Menu toggle icon */
+body.dark-mode .menu-toggle {
+    color: #e0e0e0;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     #nav-menu {
         display: none;
-        /* Hidden by default on mobile */
         position: absolute;
         top: 100%;
         left: 0;
@@ -349,9 +536,12 @@ body {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
+    body.dark-mode #nav-menu {
+        background-color: #1e1e1e;
+    }
+
     #nav-menu.active {
         display: block;
-        /* Show menu when toggle button is clicked */
     }
 
     #nav-menu ul {

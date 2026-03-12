@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuBtn.addEventListener('click', () => {
             // Toggle the 'active' class on the menu
             navMenu.classList.toggle('active');
-            
+
             // Toggle the bars/x icon based on the active class
             if (navMenu.classList.contains('active')) {
                 mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>'; // Close icon
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* --- 2. Smooth Scrolling --- */
     // Add smooth scrolling for all anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // If all fields are valid, show success message and clear form
             if (isValid) {
                 console.log('Form Submitted Successfully:', { name, email, message });
-                
+
                 // Show success message and hide form
                 successMsg.classList.remove('hidden');
                 contactForm.reset();
@@ -94,6 +94,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     successMsg.classList.add('hidden');
                 }, 5000);
+            }
+        });
+    }
+
+    /* --- 4. Dark / Light Mode Toggle --- */
+    const toggle = document.getElementById("theme-toggle");
+
+    // Load saved theme preference on page load
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+
+    if (toggle) {
+        toggle.addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+
+            // Save preference to localStorage
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
             }
         });
     }
